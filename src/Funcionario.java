@@ -1,56 +1,35 @@
 public class Funcionario {
 
-    private String nome;
-    private String cpf;
-    private double salario;
-    private int tipo = 0;
+	private String nome;
+	private String cpf;
+	private double salario;
 
-    public Funcionario() {
-        
-    }
+	public double getBonificacao() {
+		return this.salario * 0.1;
+	}
 
-    public double getBonificacao() {
+	public String getNome() {
+		return nome;
+	}
 
-        if(this.tipo == 0) {
-            return this.salario * 0.1;
-        } else if(this.tipo == 1){
-            return this.salario;
-        } else (this.tipo == 2){
-            return this.salario + 1000.0 ;
-        }
-    }
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
 
-    public void setTipo(int tipo) {
-        this.tipo = tipo;
-    }
+	public String getCpf() {
+		return cpf;
+	}
 
-    public int getTipo(){
-        return tipo;
-    }
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
 
-    public String getNome() {
-        return nome;
-    }
+	public double getSalario() {
+		return salario;
+	}
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
+	public void setSalario(double salario) {
+		this.salario = salario;
+	}
 
-    public String getCpf() {
-        return cpf;
-    }
-
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
-    }
-
-    public double getSalario() {
-        return salario;
-    }
-
-    public void setSalario(double salario) {
-        this.salario = salario;
-    }
-    
 }
-

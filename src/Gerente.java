@@ -1,19 +1,22 @@
-public class Gerente{
-    
-       private String nome;
-        private String cpf;
-        private double salario;
-        private int senha;
+public class Gerente extends Funcionario {
 
-        public boolean autentica(int senha) {
-            if(this.senha == senha) {
-                return true;
-            } else {
-                return false;
-            }
-        }
+	private int senha;
+	
+	@Override
+	public double getBonificacao() {
+	    return super.getBonificacao() + super.getSalario();
+	}
+	
+	public void setSenha(int senha) {
+		this.senha = senha;
+	}
 
-        public double getBonificacao() {
-            return this.salario;
-        }
+	public boolean autentica(int senha) {
+		if (this.senha == senha) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
 }
